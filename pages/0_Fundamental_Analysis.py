@@ -89,12 +89,13 @@ st.write(information)
 
 # This piece uses the csv file to expedite load time.
 # Create side by side columns of the top 10 companys and a barchart of all companies as a visual based on the users selection.
-dropdown3 = st.selectbox('What would you like to look at more close?', list_of_lists)
+dropdown3 = st.selectbox('What would you like to look at more closely?', list_of_lists)
 # Display the top 10s and the barchart side by side using the column function
 col1, col2 = st.columns(2)
 with col1:
     st.table(list[f'{dropdown3}'].nlargest(10))
 with col2:
+    col2.subheader("DOW 30 Stock Comparison")
     st.bar_chart(list[f'{dropdown3}'])
 
         
