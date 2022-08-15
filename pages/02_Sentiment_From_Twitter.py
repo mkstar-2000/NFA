@@ -142,3 +142,7 @@ def word_cloud(text):
 
 st.write('Wordcloud for ' + query)
 word_cloud(df['Text'].values)
+
+
+
+
