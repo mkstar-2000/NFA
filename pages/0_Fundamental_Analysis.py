@@ -47,10 +47,13 @@ def relativereturn(df):
 
 # Starts the drop down at 0 to remove an initial error 
 if len(dropdown) > 0:
-#     df = yf.download(dropdown,start,end)['Adj Close']
-    df = relativereturn(yf.download(dropdown,start)['Adj Close'])
-    st.header('Returns of {}'.format(dropdown))
+    df = yf.download(dropdown,start)['Close']
+    # df = relativereturn(yf.download(dropdown,start)['Adj Close'])
+    st.header('Closing price of {}'.format(dropdown))
     st.line_chart(df)
+    
+    
+    
     
 ############################################
 
