@@ -21,7 +21,7 @@ w3 = Web3(Web3.HTTPProvider(st.secrets['WEB3_PROVIDER_URI_OLD']))
 def load_contract():
 
     # Load Art Gallery ABI
-    with open(Path('../contracts/NFA_abi.json')) as f:
+    with open(Path('./contracts/NFA_abi.json')) as f:
         NFA_abi = json.load(f)
 
     # Set the contract address (this is the address of the deployed contract)
