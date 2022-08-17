@@ -10,6 +10,10 @@ from plotly import graph_objs as go
 from prophet import Prophet
 # Pull in financial information
 import yfinance as yf
+from web3 import Web3
+from pathlib import Path
+import json
+
 # Get w3 object
 w3 = Web3(Web3.HTTPProvider(st.secrets['WEB3_PROVIDER_URI_OLD']))
 
