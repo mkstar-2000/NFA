@@ -6,7 +6,7 @@ from web3 import Web3
 from pathlib import Path
 
 # Get w3 object
-w3 = Web3(Web3.HTTPProvider(os.getenv('WEB3_PROVIDER_URI_OLD')))
+w3 = Web3(Web3.HTTPProvider(st.secrets['WEB3_PROVIDER_URI_OLD']))
 
 # Define and load public rinkeby deployed contract
 def load_contract():
@@ -16,7 +16,7 @@ def load_contract():
         NFA_abi = json.load(f)
 
     # Set the contract address (this is the address of the deployed contract)
-    contract_address = os.getenv("SMART_CONTRACT_ADDRESS")
+    contract_address = st.secrets["SMART_CONTRACT_ADDRESS"]
 
     # Get the contract
     contract = w3.eth.contract(
