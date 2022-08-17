@@ -18,7 +18,7 @@ st.markdown(
     looking for!
  
     
-    **👈 Select a page from the sidebar** to see a variety of financial analysis tools!
+    **👈 Select a page from the sidebar** to see a variety of financial analysis!
     
     ### Feel Free to connect!
     - [Richie Garafola](https://www.linkedin.com/in/richie-garafola)
