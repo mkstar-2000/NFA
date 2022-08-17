@@ -5,6 +5,9 @@ import json
 from web3 import Web3
 from pathlib import Path
 
+# Get w3 object
+w3 = Web3(Web3.HTTPProvider(os.getenv('WEB3_PROVIDER_URI_OLD')))
+
 # Define and load public rinkeby deployed contract
 def load_contract():
 
