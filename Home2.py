@@ -35,10 +35,11 @@ st.set_page_config(
 )
 
 # Test for non-Token Holder test
-#0xBe4c620D68ED45cd7b0381eD2FD975dd7946b367
-NFA_0b = contract.functions.balanceOf('0xBe4c620D68ED45cd7b0381eD2FD975dd7946b367',int(0)).call() 
-NFA_1b = contract.functions.balanceOf('0xBe4c620D68ED45cd7b0381eD2FD975dd7946b367',int(1)).call() 
-NFA_2b = contract.functions.balanceOf('0xBe4c620D68ED45cd7b0381eD2FD975dd7946b367',int(2)).call()
+#0xBe4c620D68ED45cd7b0381eD2FD975dd7946b367 - No NFA Tokens
+#0x3Db2D37545C7b89E9A93b8D05c8805a0Ccb4780f - NFA Token exist
+NFA_0b = contract.functions.balanceOf('0x3Db2D37545C7b89E9A93b8D05c8805a0Ccb4780f',int(0)).call() 
+NFA_1b = contract.functions.balanceOf('0x3Db2D37545C7b89E9A93b8D05c8805a0Ccb4780f',int(1)).call() 
+NFA_2b = contract.functions.balanceOf('0x3Db2D37545C7b89E9A93b8D05c8805a0Ccb4780f',int(2)).call()
 NFA_allb = NFA_0b + NFA_1b + NFA_2b
 
 if NFA_allb <= 0:
